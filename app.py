@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, jsonify
 from algorithms.bfs import bfs as ref_bfs
 from algorithms.dfs import dfs as ref_dfs
