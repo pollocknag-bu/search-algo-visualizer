@@ -1,0 +1,54 @@
+#grid {
+    display: grid;
+    gap: 2px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cell.blue {
+    background-color: lightblue;
+}
+
+.cell.start {
+    background-color: green;
+    color: white;
+}
+
+.cell.goal {
+    background-color: red;
+    color: white;
+}
+
+.cell.visited {
+    background-color: yellow;
+}
+
+.cell.path {
+    background-color: gray !important;
+}
+
+.cell.start_after_colplete {
+    background-color: gray;
+    border:1px solid green;
+    color: white;
+}
+
+.cell.goal_after_colplete {
+    background-color: gray;
+    border: 1px solid red;
+    color: white;
+}
+
+
+.cell.weighted {
+    background-color: mediumblue;
+    color: white;
+}

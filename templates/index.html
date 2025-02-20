@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <link rel="stylesheet" href="/static/styles/layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+VN+Guides&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Search Algorithm Visualizer</h1>
+    </header>
+    <div class="container">
+        <div class="grid-side">
+            <div id="grid"></div>
+            <div id="weightInfo">
+                <span> You can set <b>weight</b> of the cell by click <b>right</b> button of your mouse</span><br>
+                <span> Weight should be a positive integer of at maximum 3 digits</span><br>
+            </div>
+
+            <div id="info">
+                <span>1. Click on the grid to set the start and end points.</span> <br>
+                <span>2. Default weight of each cell is assigned to 1.</span> <br>
+                <span>3. From each cell one can move 4 direction (Left, Right, Up, Down)</span> <br>
+                <div class="legend-item">
+                    <div class="legend-box visited-box"></div>
+                    <span>Visited cells</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-box path-box"></div>
+                    <span>Path cells</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="controls-side">
+            <div class="controls">
+                <div id="selectGridDiv">
+                    <label for="gridSize">Grid Size</label>
+                    <select id="gridSize">
+                        <option value="10">Small</option>
+                        <option value="20">Medium</option>
+                        <option value="30">Large</option>
+                    </select>
+                </div>
+
+                <div id="selectAlgorithmDiv">
+                    <label for="algorithm">Algorithm</label>
+                    <select id="algorithm">
+                        <option value="bfs">BFS</option>
+                        <option value="dfs">DFS</option>
+                        <option value="dijkstra">Dijkstra</option>
+                        <option value="a_star">A*</option>
+                    </select>
+                </div>
+
+                <div id="visualizationModeDiv">
+                    <label for="visualizationMode">Visualization Mode</label>
+                    <select id="visualizationMode">
+                        <option value="animated">Animated</option>
+                        <option value="instant">Instant</option>
+                    </select>
+                </div>
+
+                <div id="heuristicFunctionDiv">
+                    <label for="heuristicFunction">Heuristic Function</label>
+                    <select id="heuristicFunction">
+                        <option value="straightLine">Straight Line Distance</option>
+                        <option value="manhattan">Manhattan Distance</option>
+                    </select>
+                </div>
+                <button id="resetButton">Reset</button>
+            </div>
+            <footer>
+                <p>All rights reserved @pollocknag2025v1 | <a href="https://www.linkedin.com/in/pollock-nag-232149239" target="_blank">LinkedIn</a></p>
+            </footer>
+        </div>
+    </div>
+    <script src="/static/scripts/app.js"></script>
+</body>
+</html>

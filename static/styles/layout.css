@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 0.1rem 0;
+    font-size: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.grid-side, .controls-side {
+    padding: 1rem;
+}
+
+.grid-side {
+    flex-grow: 2;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.controls-side {
+    flex-grow: 1;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.controls div {
+    margin-bottom: 1rem;
+}
+
+select, button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+footer {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#weightInfo, #info {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Legend styles */
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.legend-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+}
+
+.visited-box { background-color: yellow; }
+.path-box { background-color: gray; }
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+    .grid-side, .controls-side {
+        flex: 1;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    #selectGridDiv {
+        pointer-events: none;
+        opacity: 0.4;
+    }
+}
+
+#grid {
+    display: grid;
+    gap: 2px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cell.blue { background-color: lightblue; }
+.cell.start { background-color: green; color: white; }
+.cell.goal { background-color: red; color: white; }
+.cell.visited { background-color: yellow; }
+.cell.path { background-color: gray !important; }
+.cell.start_after_colplete { background-color: gray; border: 1px solid green; color: white; }
+.cell.goal_after_colplete { background-color: gray; border: 1px solid red; color: white; }
+.cell.weighted { background-color: mediumblue; color: white; }
+
+:root {
+    --primary-color: #5f916a;
+    --primary-hover-color: #45a049;
+    --background-color: #F0EBE3;
+    --text-color: #333;
+}
