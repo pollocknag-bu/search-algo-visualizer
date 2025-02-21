@@ -152,8 +152,8 @@ footer a:hover {
 .cell.weighted { background-color: mediumblue; color: white; }
 
 :root {
-    --primary-color: #5f916a;
-    --primary-hover-color: #45a049;
-    --background-color: #F0EBE3;
+    --primary-color: #4a4e69;
+    --primary-hover-color: #22223b;
+    --background-color: #f2e9e4;
     --text-color: #333;
 }
